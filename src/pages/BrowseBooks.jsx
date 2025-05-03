@@ -33,7 +33,7 @@ const BrowseBooks = () => {
       <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredBooks.map((book) => (
           <li
-            key={book.id}
+            key={`${book.title}--${book.language}`}
             className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
             <h3 className="text-xl font-semibold text-gray-800">
               {book.title}
@@ -41,7 +41,7 @@ const BrowseBooks = () => {
             <p className="text-gray-600">Author: {book.author}</p>
             <p className="text-gray-600">Language {book.language}</p>
             <Link
-              to={`/book-details/${book.id}`}
+              to={`/details/${book.title}`}
               className="inline-block mt-4 px-4 py-2 bg-blue-500 text-white rounded-lg shadow hover:bg-blue-600 transition-colors">
               View Details
             </Link>

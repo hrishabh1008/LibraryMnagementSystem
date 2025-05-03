@@ -73,7 +73,7 @@ const HomePage = () => {
               key={lang}
               language={lang}
               handleFilterBtn={(e) => {
-                console.log(e);
+                // console.log(e);
                 const innerText = e.target.innerText.toUpperCase();
                 setSearchText(innerText);
                 handleFilterBtn();

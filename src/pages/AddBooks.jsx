@@ -33,7 +33,7 @@ const AddBooks = () => {
     e.preventDefault();
     if (validateForm()) {
       dispatch(addBook(formData));
-      navigate('/browse-books');
+      navigate("/browse");
     }
   };
 
